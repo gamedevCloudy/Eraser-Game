@@ -20,16 +20,8 @@ public class playerController : MonoBehaviour
     private void Update()
     {
         horizontalMove = joyStk.Horizontal * sideWayForce * Time.deltaTime;
-    }
-
-    private void FixedUpdate() 
-    {
-       
+         
         rb.AddForce(horizontalMove, 0, 0, ForceMode.VelocityChange);
         rb.AddForce(0,0,forwardForce * Time.deltaTime); 
     }
-    
-   
-    
-   
 }
